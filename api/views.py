@@ -146,9 +146,9 @@ class ArtistMethods(APIView):
             artist.name = name
             artist.id = new_id
             artist.age = age
-            artist.self_a = f"http://127.0.0.1:8000/artists/{artist.id}"
-            artist.albums = f"http://127.0.0.1:8000/artists/{artist.id}/albums"
-            artist.tracks = f"http://127.0.0.1:8000/artists/{artist.id}/tracks"
+            artist.self_a = f"https://ancient-ridge-10971.herokuapp.com/artists/{artist.id}"
+            artist.albums = f"https://ancient-ridge-10971.herokuapp.com/artists/{artist.id}/albums"
+            artist.tracks = f"https://ancient-ridge-10971.herokuapp.com/artists/{artist.id}/tracks"
             
             datos = (artist.id, artist.name, artist.age, artist.albums, artist.tracks, artist.self_a)
             keys = ("id", "name", "age", "albums", "tracks", "self_a")
@@ -240,9 +240,9 @@ class ArtistMethos_forAlbums(APIView):
             album.name = name
             album.id = new_id
             album.genre = genre
-            album.self_u = f"http://127.0.0.1:8000/albums/{album.id}"
+            album.self_u = f"https://ancient-ridge-10971.herokuapp.com/albums/{album.id}"
             album.artist = artista.self_a
-            album.tracks = f"http://127.0.0.1:8000/albums/{album.id}/tracks"
+            album.tracks = f"https://ancient-ridge-10971.herokuapp.com/albums/{album.id}/tracks"
             
             datos = (album.id, album.name, album.genre, album.artist, album.tracks, album.self_u)
             keys = ("id", "name", "genre", "artist", "tracks", "self_u")
@@ -342,7 +342,7 @@ class AlbumMethods_forTracks(APIView):
             track.id = new_id
             track.duration = duration
             track.times_played = times_played
-            track.self_c = f"http://127.0.0.1:8000/tracks/{track.id}"
+            track.self_c = f"https://ancient-ridge-10971.herokuapp.com/tracks/{track.id}"
             track.album = album.self_u
             track.artist = artist.self_a
             track.save()
