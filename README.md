@@ -12,6 +12,11 @@ Nosé si es algo particular con mi computador o que, pero estuve varias horas so
 
 ERROR:
 
+2021-05-03T16:39:58.000000+00:00 app[api]: Build started by user dachaparro@uc.cl
+2021-05-03T16:40:30.753110+00:00 app[api]: Deploy af038f8a by user dachaparro@uc.cl
+2021-05-03T16:40:30.753110+00:00 app[api]: Release v13 created by user dachaparro@uc.cl
+2021-05-03T16:40:42.000000+00:00 app[api]: Build succeeded
+
 
 2021-05-03T16:16:22.910878+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=ancient-ridge-10971.herokuapp.com request_id=24415b9e-b70b-4b95-8f7b-0e0f8f3820c8 fwd="186.67.250.23" dyno= connect= service= status=503 bytes= protocol=https
 2021-05-03T16:16:23.289068+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=ancient-ridge-10971.herokuapp.com request_id=2055dd6a-2d90-4cff-aa81-0360bc0f30dd fwd="186.67.250.23" dyno= connect= service= status=503 bytes= protocol=https
