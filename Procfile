@@ -1,1 +1,1 @@
-web:gunicorn music.wsgi
+web: python manage.py runserver
