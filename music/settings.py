@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'music.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -91,6 +91,13 @@ DATABASES = {
         'PASSWORD': 'eb31b6c7ef3c47306b115439b02f50cf4952badc6738da6e65c19d2941a49766',
 
     }   
+}"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 #os.path.join(BASE_DIR, 'db.sqlite3')
 
@@ -138,4 +145,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
 django_on_heroku.settings(locals())
