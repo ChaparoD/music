@@ -32,8 +32,6 @@ def index(response):
         'Create (POST)':'artist/id/albums/',
         'View (GET)': '/albums/id/tracks',
         
-
-
         'List (GET)': '/tracks/',
         'Detail View (GET)': '/tracks/id/',
         'Delete View (DELETE)': '/tracks/id/',
