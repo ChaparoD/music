@@ -23,10 +23,24 @@ def index(response):
         'List (GET)': '/artists/',
         'Detail View (GET)': '/artists/id/',
         'Delete View (DELETE)': '/artists/id/',
+        'List View (GET)': 'artists/id/albums/',
         'Create (POST)':'/artists/',
 
-        'Update': 'artist-update/<str:id>',
-        'Delete': 'artist-delete/<str:id>/'
+        'List (GET)': '/albums/',
+        'Detail View (GET)': '/albums/id/',
+        'Delete View (DELETE)': '/albums/id/',
+        'Create (POST)':'artist/id/albums/',
+        'View (GET)': '/albums/id/tracks',
+        
+
+
+        'List (GET)': '/tracks/',
+        'Detail View (GET)': '/tracks/id/',
+        'Delete View (DELETE)': '/tracks/id/',
+        'Create (POST)': '/albums/id/tracks',
+
+
+        
     }
 
     return Response(api_urls)
@@ -181,7 +195,7 @@ class ArtistMethods_id(APIView):
 
         return Response({}, status = status.HTTP_204_NO_CONTENT)
 
-#artist/id/albums (NO reconoce times_played) 
+#artist/id/albums (LISTO)
 class ArtistMethos_forAlbums(APIView):
     serializer_class = serializers.AlbumSerializer
     print("entro a la clase")
